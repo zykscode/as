@@ -1,0 +1,63 @@
+.pageSocial {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+ }
+
+.action {
+  position: relative;
+  border-radius: 50%;
+  /* border: 2px solid var(--fg-color-6); */
+  transition: all 300ms ease-out;
+  margin: 0 0 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none !important;
+  user-select: none;
+  cursor: pointer;
+}
+
+
+
+.actionBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.actionBg svg {
+/*  width: 50%;
+  height: 50%;
+  /* fill: var(--fg-color-6); */
+} 
+
+.actionBgPane {
+  transition: all 300ms ease-out;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+}
+
+.action:hover {
+  transition: all 100ms ease-out;
+}
+
+.action:hover .actionBgPane {
+  width: 100%;
+  height: 100%;
+  transition: all 100ms ease-out;
+}
+
+.action:hover svg {
+  transition: fill 100ms ease-out;
+  /* fill: var(--bg-color); */
+}

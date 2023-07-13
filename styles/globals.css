@@ -1,0 +1,350 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+
+:root {
+  --font: ui-sans-serif,system-ui,apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,"Apple Color Emoji",Arial,sans-serif,"Segoe UI Emoji","Segoe UI Symbol";
+  --fg-color: #37352f;
+  --mouse-x: 100px;
+  --mouse-y: 250px;
+  --fg-color-0: rgba(55,53,47,.09);
+  --fg-color-1: rgba(55,53,47,.16);
+  --fg-color-2: rgba(55,53,47,.4);
+  --fg-color-3: rgba(55,53,47,.6);
+  --fg-color-4: #000;
+  --fg-color-5: rgba(55,53,47,.024);
+  --fg-color-6: rgba(55,53,47,.8);
+  --fg-color-icon: var(--fg-color);
+  --bg-color: #fff;
+  --bg-color-0: hsla(44,6%,50%,.15);
+  --bg-color-1: #f7f6f3;
+  --bg-color-2: hsla(44,6%,50%,.15);
+  --select-color-0: #2eaadc;
+  --select-color-1: rgba(45,170,219,.3);
+  --select-color-2: #d9eff8;
+  --red: #e03e3e;
+  --pink: #ad1a72;
+  --blue: #0b6e99;
+  --purple: #6940a5;
+  --teal: #4d6461;
+  --yellow: #dfab01;
+  --orange: #d9730d;
+  --brown: #64473a;
+  --gray: #9b9a97;
+  --ashley:hsla(353, 96%, 37%, 1);
+  --red_background: #fbe4e4;
+  --pink_background: #f4dfeb;
+  --blue_background: #ddebf1;
+  --purple_background: #eae4f2;
+  --teal_background: #ddedea;
+  --yellow_background: #fbf3db;
+  --orange_background: #faebdd;
+  --brown_background: #e9e5e3;
+  --gray_background: #ebeced;
+  --red_background_co: hsla(0,74%,94%,.3);
+  --pink_background_co: rgba(244,223,235,.3);
+  --blue_background_co: rgba(221,235,241,.3);
+  --purple_background_co: rgba(234,228,242,.3);
+  --teal_background_co: rgba(221,237,234,.3);
+  --yellow_background_co: hsla(45,80%,92%,.3);
+  --orange_background_co: hsla(29,74%,92%,.3);
+  --brown_background_co: hsla(20,12%,90%,.3);
+  --gray_background_co: hsla(210,5%,93%,.3);
+  --item-blue: rgba(0,120,223,.2);
+  --item-orange: rgba(245,93,0,.2);
+  --item-green: rgba(0,135,107,.2);
+  --item-pink: rgba(221,0,129,.2);
+  --item-brown: rgba(140,46,0,.2);
+  --item-red: rgba(255,0,26,.2);
+  --item-yellow: rgba(233,168,0,.2);
+  --item-default: hsla(45,4%,80%,.5);
+  --item-purple: rgba(103,36,222,.2);
+  --item-gray: hsla(45,2%,60%,.4);
+  --max-width: 720px;
+  --header-height: 45px
+}
+
+.dark {
+  --fg-color: hsla(0,0%,100%,.9);
+  --fg-color-0: var(--fg-color);
+  --fg-color-1: var(--fg-color);
+  --fg-color-2: var(--fg-color);
+  --fg-color-3: var(--fg-color);
+  --fg-color-4: var(--fg-color);
+  --fg-color-5: hsla(0,0%,100%,.7);
+  --fg-color-6: #fff;
+  --fg-color-icon: #fff;
+  --bg-color: #2f3437;
+  --bg-color-0: #474c50;
+  --bg-color-1: #3f4447;
+  --bg-color-2: hsla(44,6%,50%,.15);
+  --ashley:hsla(353, 96%, 37%, 0.77);
+  --red: #ff7369;
+  --pink: #e255a1;
+  --blue: #529cca;
+  --purple: #9a6dd7;
+  --teal: #4dab9a;
+  --yellow: #ffdc49;
+  --orange: #ffa344;
+  --brown: #937264;
+  --gray: hsla(195,2%,60%,.95);
+  --red_background: #594141;
+  --pink_background: #533b4c;
+  --blue_background: #364954;
+  --purple_background: #443f57;
+  --teal_background: #354c4b;
+  --yellow_background: #59563b;
+  --orange_background: #594a3a;
+  --brown_background: #434040;
+  --gray_background: #454b4e;
+  --red_background_co: rgba(89,65,65,.3);
+  --pink_background_co: rgba(83,59,76,.3);
+  --blue_background_co: rgba(120,162,187,.3);
+  --purple_background_co: rgba(68,63,87,.3);
+  --teal_background_co: rgba(53,76,75,.3);
+  --yellow_background_co: rgba(89,86,59,.3);
+  --orange_background_co: rgba(89,74,58,.3);
+  --brown_background_co: rgba(67,64,64,.3);
+  --gray_background_co: rgba(69,75,78,.3)
+}
+a.breadcrumb {
+  @apply text-blue-700;
+}
+
+a.breadcrumb:hover {
+  @apply border-b-2 border-blue-700;
+}
+
+
+.nj-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.nj-item {
+  padding: 2rem;
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  will-change: transform, background-color, border-color;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out,
+    border-color 0.3s ease-out;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  .nj-heading {
+    font-size: 2rem;
+  }
+}
+
+
+
+.content p {
+  @apply my-6;
+}
+
+.content ul {
+  @apply my-6;
+}
+
+
+.animated-gradient-text_background{
+
+    position: relative;
+    display: block;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.animated-gradient-text_background:before {
+  content: attr(data-content);
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: -10px;
+  background: var(--fg-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  }
+
+  .animated-gradient-text_background-1:before {
+    animation: animated-gradient-text_fade-background-1 8s infinite;
+}
+
+.animated-gradient-text_foreground-1{
+  animation: animated-gradient-text_fade-foreground-1 8s infinite;
+}
+.animated-gradient-text_foreground-2{
+  animation: animated-gradient-text_fade-foreground-2 8s infinite;
+}
+.animated-gradient-text_foreground-3{
+  animation: animated-gradient-text_fade-foreground-3 8s infinite;
+}
+
+.animated-gradient-text_foreground {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg,var(--start-color),var(--end-color));
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes animated-gradient-text_fade-foreground-1 {
+
+  0%,
+  16.667%,
+  to {
+    opacity: 1
+  }
+
+  33.333%,
+  83.333% {
+    opacity: 0
+  }
+}
+
+@keyframes animated-gradient-text_fade-background-1 {
+
+  0%,
+  16.667%,
+  to {
+    opacity: 0
+  }
+
+  25%,
+  91.667% {
+    opacity: 1
+  }
+}
+
+
+@keyframes animated-gradient-text_fade-foreground-2 {
+
+  0%,
+  to {
+    opacity: 0
+  }
+
+  33.333%,
+  50% {
+    opacity: 1
+  }
+
+  16.667%,
+  66.667% {
+    opacity: 0
+  }
+}
+
+@keyframes animated-gradient-text_fade-background-2 {
+
+  0%,
+  to {
+    opacity: 1
+  }
+
+  33.333%,
+  50% {
+    opacity: 0
+  }
+
+  25%,
+  58.333% {
+    opacity: 1
+  }
+}
+
+@keyframes animated-gradient-text_fade-foreground-3 {
+
+  0%,
+  50%,
+  to {
+    opacity: 0
+  }
+
+  66.667%,
+  83.333% {
+    opacity: 1
+  }
+}
+
+@keyframes animated-gradient-text_fade-background-3 {
+
+  0%,
+  58.333%,
+  91.667%,
+  to {
+    opacity: 1
+  }
+
+  66.667%,
+  83.333% {
+    opacity: 0
+  }
+}
+
+.leaflet-bottom.leaflet-right{
+  display: none;
+}
+
+.circle-color-input {
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.isaac{
+  color: #1a1a1a;
+}
+
+.circle-color-input::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.circle-color-input::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+
+.border-animation{
+  width: 100%;
+  height: 100%;
+  background-image: url("../public/border.svg");
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 5%, rgb(0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: repeat-x;
+  background-size: 40px 8px;
+animation: animated-background 2s linear infinite;
+}
+
+@keyframes animated-background {
+
+  100%,
+  to {
+    background-position-x: -40px
+  }
+
+  0% {
+    background-position-x: -80
+  }
+}

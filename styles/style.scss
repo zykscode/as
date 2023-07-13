@@ -1,0 +1,11 @@
+
+  .moving-heatmap-area {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/heat-map.png);
+    width: 1024px;
+    height: 440px;
+    box-shadow: 0 0 20px rgba(black, 0.2);
+    transform: translate( 
+      calc(calc(var(--mouse-x) / 1.5 * -1) + 120px),
+      calc(calc(var(--mouse-y) / 2.5 * -1) + 20px)
+    );
+  }
